@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     environment {
         AZURE_CREDENTIALS_ID = 'python-service-principal'
         RESOURCE_GROUP = 'rg-jenkins-python'
