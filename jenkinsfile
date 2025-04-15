@@ -20,11 +20,13 @@ pipeline {
             steps {
                 bat '''
                     "%PYTHON_PATH%" --version
+                    "%PYTHON_PATH%" -m ensurepip --upgrade
                     "%PYTHON_PATH%" -m pip install --upgrade pip
                     "%PYTHON_PATH%" -m pip install -r requirements.txt
                 '''
             }
         }
+
         
         stage('Deploy') {
             steps {
